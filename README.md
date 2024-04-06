@@ -15,3 +15,10 @@
 **Example**
 
     kubeseal -f secret.yaml -o yaml > sealed-secret.yaml
+
+# Errors and Solution
+
+1) error: cannot get sealed secret service: services "sealed-secrets-controller" not found
+   
+        kubeseal --controller-name=sealed-secrets --controller-namespace=kube-system -f secret.yaml -o yaml > sealed-secret.yaml 
+    
